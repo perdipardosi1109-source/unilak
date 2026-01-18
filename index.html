@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Form Data Mahasiswa</title>
+
+<style>
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: url("unilak.jpg") ;
+  background-size: cover;
+}
+
+.container {
+  width: 500px;
+  margin: 60px auto;
+  background: rgba(255,255,255,0.9);
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+h2 {
+  text-align: center;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: #2c7be5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Input Data Mahasiswa</h2>
+
+  <form onsubmit="simpanData(); return false;">
+
+    <label>Nama Lengkap</label>
+    <input type="text" id="nama" required>
+
+    <label>Alamat</label>
+    <textarea id="alamat" required></textarea>
+
+    <label>Tanggal Lahir</label>
+    <input type="date" id="tgl" required>
+
+    <label>Jenis Kelamin</label>
+    <input type="radio" name="jk" value="Pria" required> Pria
+    <input type="radio" name="jk" value="Wanita"> Wanita
+
+    <label>Agama</label>
+    <select id="agama">
+      <option>Islam</option>
+      <option>Kristen</option>
+      <option>Katolik</option>
+      <option>Hindu</option>
+      <option>Buddha</option>
+    </select>
+
+    <label>Email</label>
+    <input type="email" id="email">
+
+    <label>Foto Diri</label>
+    <input type="file">
+
+    <button type="submit">Kirim</button>
+  </form>
+</div>
+
+<script>
+function simpanData() {
+  alert("Data berhasil diisi (mode GitHub Pages).\nTidak tersimpan ke database.");
+}
+</script>
+
+</body>
+</html>
